@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .fibonacci-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fibonacci-square {
+            position: absolute;
+            background-color: #3498db;
+        }
+
+        .fibonacci-square:nth-child(1) {
+            width: 30px;
+            height: 30px;
+            top: calc(50% - 15px);
+            left: calc(50% - 15px);
+        }
+
+        .fibonacci-square:nth-child(2) {
+            width: 30px;
+            height: 30px;
+            top: calc(50% - 15px);
+            left: calc(50% - 45px);
+        }
+
+        /* Fügen Sie weitere .fibonacci-square:nth-child(X) Regeln für weitere Quadrate hinzu */
+
+        /* Hier ist eine einfache Regel, um weitere Quadrate zu erstellen */
+        .fibonacci-square:nth-child(n+3) {
+            display: none;
+        }
+
+        .fibonacci-square:nth-child(n+4) {
+            display: block;
+            width: 60px;
+            height: 60px;
+            top: calc(50% - 45px);
+            left: calc(50% - 45px);
+        }
+
+        .fibonacci-square:nth-child(n+5) {
+            display: block;
+            width: 90px;
+            height: 90px;
+            top: calc(50% - 75px);
+            left: calc(50% - 45px);
+        }
+
+        .fibonacci-square:nth-child(n+6) {
+            display: block;
+            width: 150px;
+            height: 150px;
+            top: calc(50% - 120px);
+            left: calc(50% - 75px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="fibonacci-container">
+    <div class="fibonacci-square"></div>
+    <div class="fibonacci-square"></div>
+    <div class="fibonacci-square"></div>
+    <div class="fibonacci-square"></div>
+    <div class="fibonacci-square"></div>
+</div>
+
+</body>
+</html>
